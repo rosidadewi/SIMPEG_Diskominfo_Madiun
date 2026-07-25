@@ -1,0 +1,153 @@
+/* Container Styling */
+.dashboard-container {
+    background: linear-gradient(135deg, #1E3A8A, #60A5FA);
+    min-height: 100vh;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+    animation: bgShift 15s infinite ease-in-out;
+}
+
+/* Background Animation */
+@keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Background Image */
+.background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 50%;
+    background: url('../images/background-kominfo.png') no-repeat center center/cover;
+    opacity: 0.15;
+    z-index: 1;
+    animation: fadeInOut 8s infinite ease-in-out;
+}
+
+/* Background Image Animation */
+@keyframes fadeInOut {
+    0% { opacity: 0.15; }
+    50% { opacity: 0.3; }
+    100% { opacity: 0.15; }
+}
+
+/* Decorative Circles */
+.decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent);
+    z-index: 0;
+    animation: float 6s infinite ease-in-out;
+}
+
+.decorative-circle-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 2s;
+    animation-direction: reverse;
+}
+
+.decorative-circle-3 {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+/* Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Header Styling */
+.dashboard-header {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-header:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Logo */
+.header-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Title Styling */
+.dashboard-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Date Styling */
+.dashboard-date {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1s ease-out;
+    position: relative;
+    padding-left: 30px;
+}
+
+.dashboard-date:before {
+    content: "\f073";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+/* Card Modern */
+.card-modern {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    transition: 0.3s all ease-in-out;
+    margin-top: 50px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.card-modern:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
