@@ -107,3 +107,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::delete('/user/{id}', [AdminController::class, 'destroy'])->name('admin.user.destroy');
 
 });
+
+   Route::get('/cek-gd', function () {
+       return [
+           'gd'      => extension_loaded('gd'),
+           'png'     => function_exists('imagecreatefrompng'),
+           'ini'     => php_ini_loaded_file(),
+           'binary'  => PHP_BINARY,
+       ];
+   });
